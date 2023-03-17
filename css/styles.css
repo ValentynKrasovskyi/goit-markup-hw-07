@@ -77,8 +77,10 @@ body {
   margin: 0 auto;
 }
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  /* padding-top: 120px;
+  padding-bottom: 120px; */
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .btn {
   display: block;
@@ -214,11 +216,13 @@ body {
   margin-bottom: 8px;
 }
 .features-list {
-  display: flex;
-  gap: 24px;
+  /* display: flex;
+  gap: 24px; */
+  margin-bottom: 72px;
 }
 .features-item {
-  max-width: 264px;
+  /* max-width: 264px; */
+  width: 100%;
 }
 .features-link {
   width: 264px;
@@ -709,4 +713,15 @@ body {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 426px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 766px;
+  }
 }
