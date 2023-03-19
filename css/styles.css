@@ -48,6 +48,9 @@ body {
 .link {
   text-decoration: none;
 }
+.no-scroll {
+  overflow: hidden;
+}
 .section-title {
   font-size: 36px;
   line-height: 1.2;
@@ -112,6 +115,9 @@ body {
 .header {
   border-bottom: 1px solid #e7e9fc;
 }
+.active {
+  display: none;
+}
 .menu-list {
   display: none;
 }
@@ -150,6 +156,10 @@ body {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   padding: 24px 24px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
 }
 .mobile-menu-list {
 }
@@ -183,6 +193,7 @@ body {
   color: #434455;
   display: block;
   transition: color var(--transition);
+  margin-bottom: 40px;
 }
 .adress-mobile-menu-link:is(:hover, :focus) {
   color: #4d5ae5;
@@ -201,8 +212,8 @@ body {
 }
 .mob-soc-list {
   display: flex;
-  justify-content: center;
   gap: 56px;
+  margin-top: 48px;
 }
 .mob-soc-item {
   width: 40px;
