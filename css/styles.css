@@ -32,8 +32,8 @@ p {
 }
 img {
   display: block;
-  width: 100%;
   height: auto;
+  max-width: 100%;
 }
 
 /*?-----------------------BASE-------------------------- */
@@ -113,56 +113,114 @@ body {
   border-bottom: 1px solid #e7e9fc;
 }
 .menu-list {
-  display: flex;
-  gap: 40px;
-}
-
-.menu-link {
-  position: relative;
-  line-height: 1.5;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: var(--tittle-text-color);
-  display: block;
-  padding: 24px 0;
-  transition: color var(--transition);
-}
-.active {
-  color: var(--link-accent);
-}
-.active:after {
-  position: absolute;
-  bottom: -1px;
-  content: "";
-  display: block;
-  height: 4px;
-  width: 100%;
-  background-color: #404bbf;
-  border-radius: 2px;
-}
-.menu-link:is(:hover, :focus) {
-  color: var(--link-accent);
-}
-.adress {
-  display: flex;
-  align-items: center;
+  display: none;
 }
 .adress-menu {
-  display: flex;
-  gap: 40px;
+  display: none;
 }
-.adress-link {
-  font-style: normal;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
+.mobile-menu-open {
+  background-color: transparent;
+  border: none;
+  padding: 24px 16px;
+}
+.mobile-menu-icon {
+  stroke: #2e2f42;
+}
+.mobile-menu-close {
+  background-color: rgba(231, 233, 252, 0.1);
+  border: 1px solid rgba(46, 47, 66, 0.1);
+  border-radius: 50%;
   display: block;
-  padding: 24px 0;
-  transition: color var(--transition);
+  margin-left: auto;
+  margin-bottom: 32px;
+}
+.mobile-menu-close:is(:hover, :focus) {
+  background-color: var(--link-accent);
+  fill: var(--primary-white-color);
+  cursor: pointer;
 }
 
-.adress-link:is(:hover, :focus) {
-  color: var(--link-accent);
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100%;
+  background-color: var(--primary-white-color);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  padding: 24px 24px 40px 40px;
+}
+.mobile-menu-list {
+}
+.mobile-menu-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+.mobile-menu-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: var(--section-title-color);
+  transition: color var(--transition);
+}
+.mobile-menu-link:is(:hover, :focus) {
+  color: #404bbf;
+}
+.mobile-menu-adress {
+}
+.adress-mobile-menu {
+}
+.adress-mobile-menu-item {
+}
+.adress-mobile-menu-link {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #434455;
+  display: block;
+  transition: color var(--transition);
+}
+.adress-mobile-menu-link:is(:hover, :focus) {
+  color: #4d5ae5;
+}
+.adress-email-menu-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+  transition: color var(--transition);
+}
+.adress-email-menu-link:is(:hover, :focus) {
+  color: #4d5ae5;
+}
+.mob-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 56px;
+}
+.mob-soc-item {
+  width: 40px;
+  height: 40px;
+}
+.mob-soc-link {
+  width: 100%;
+  height: 100%;
+  background-color: var(--modal-btn-color);
+  display: block;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition);
+}
+.mob-soc-link:is(:hover, :focus) {
+  background-color: #404bbf;
 }
 /*?-----------------------HERO-------------------------- */
 .main-btn {
@@ -193,11 +251,22 @@ body {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero-background.jpg);
+    url(../images/hero-bg-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding: 112px 54px;
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg-mobile-2x.jpg);
+  }
 }
 .hero-title {
   font-weight: 700;

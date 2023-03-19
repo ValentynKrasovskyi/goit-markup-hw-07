@@ -24,7 +24,7 @@
   </head>
   <body>
     <!-- Header -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-container">
         <nav class="nav">
           <a class="logo link" href="./index.html"
@@ -56,8 +56,83 @@
             </li>
           </ul>
         </address>
+        <button type="button" class="mobile-menu-open">
+          <svg class="mobile-menu-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-hamburger"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mobile-menu">
+        <button type="button" class="mobile-menu-close">
+          <svg class="mobile-menu-close-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-black-btn"></use>
+          </svg>
+        </button>
+        <ul class="mobile-menu-list list">
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-link link active" href="./index.html"
+              >Studio</a
+            >
+          </li>
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-link link" href="./portfolio.html"
+              >Portfolio</a
+            >
+          </li>
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-link link" href="./contacts.html">Contacts</a>
+          </li>
+        </ul>
+        <address class="mobile-menu-adress">
+          <ul class="adress-mobile-menu list">
+            <li class="adress-mobile-menu-item">
+              <a
+                class="adress-mobile-menu-link link"
+                href="tel:+11(000)111-11-11"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="adress-mobile-menu-item">
+              <a
+                class="adress-email-menu-link link"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </address>
+        <ul class="mob-soc-list list">
+          <li class="mob-soc-item">
+            <a href="" class="mob-soc-link link">
+              <svg class="mob-soc-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mob-soc-item">
+            <a href="" class="mob-soc-link link">
+              <svg class="mob-soc-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mob-soc-item">
+            <a href="" class="mob-soc-link link">
+              <svg class="mob-soc-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mob-soc-item">
+            <a href="" class="mob-soc-link link">
+              <svg class="mob-soc-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
     <main>
       <section class="hero section">
         <div class="container">
@@ -130,11 +205,23 @@
           <h2 class="section-title" data-aos="flip-left">What are we doing</h2>
           <ul class="examples-list list" data-aos="zoom-in-right">
             <li class="examples-item">
-              <img src="./images/examples-1.jpg" alt="Computer" width="360" />
+              <img
+                srcset="
+                  ./images/examples-1.jpg    1x,
+                  ./images/examples-1-2x.jpg 2x
+                "
+                src="./images/examples-1.jpg"
+                alt="Computer"
+                width="360"
+              />
             </li>
             <li class="examples-item">
               <img
                 src="./images/examples-2.jpg"
+                srcset="
+                  ./images/examples-2.jpg    1x,
+                  ./images/examples-2-2x.jpg 2x
+                "
                 alt="Mobile phone with many displays"
                 width="360"
               />
@@ -142,6 +229,10 @@
             <li class="examples-item">
               <img
                 src="./images/examples-3.jpg"
+                srcset="
+                  ./images/examples-3.jpg    1x,
+                  ./images/examples-3-2x.jpg 2x
+                "
                 alt="the phone in the hand on the background of the computer screen"
                 width="360"
               />
@@ -156,6 +247,7 @@
           <ul class="team-list list" data-aos="zoom-in-left">
             <li class="team-item">
               <img
+                srcset="./images/man-1.jpg 1x, ./images/man-1-2x.jpg 2x"
                 src="./images/man-1.jpg"
                 alt="A man with a smile and a thick beard in a blue shirt"
                 width="264"
@@ -197,6 +289,7 @@
             </li>
             <li class="team-item">
               <img
+                srcset="./images/man-2.jpg 1x, ./images/man-2-2x.jpg 2x"
                 src="./images/man-2.jpg"
                 alt="The man smiles and looks to the left"
                 width="264"
@@ -238,6 +331,7 @@
             </li>
             <li class="team-item">
               <img
+                srcset="./images/woman-1.jpg 1x, ./images/woman-1-2x.jpg 2x"
                 src="./images/woman-1.jpg"
                 alt="The girl in the pink sweater is smiling"
                 width="264"
@@ -279,6 +373,7 @@
             </li>
             <li class="team-item">
               <img
+                srcset="./images/man-3.jpg 1x, ./images/man-3-2x.jpg 2x"
                 src="./images/man-3.jpg"
                 alt="A man in a gray T-shirt is smiling"
                 width="264"

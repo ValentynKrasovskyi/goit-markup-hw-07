@@ -1,4 +1,22 @@
 @media screen and (min-width: 480px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg-tablet.jpg);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-bg-tablet-2x.jpg);
+    }
+  }
   .container {
     max-width: 426px;
   }
@@ -7,9 +25,80 @@
   }
 }
 @media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-background.jpg);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-background-2x.jpg);
+    }
+  }
   .container {
     max-width: 766px;
   }
+  .menu-list {
+    display: flex;
+    gap: 40px;
+  }
+
+  .menu-link {
+    position: relative;
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--tittle-text-color);
+    display: block;
+    padding: 24px 0;
+    transition: color var(--transition);
+  }
+  .menu-link:is(:hover, :focus) {
+    color: var(--link-accent);
+  }
+  .active {
+    color: var(--link-accent);
+  }
+  .active:after {
+    position: absolute;
+    bottom: -1px;
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #404bbf;
+    border-radius: 2px;
+  }
+  .adress {
+    display: flex;
+    align-items: center;
+  }
+  .adress-menu {
+    display: flex;
+    gap: 40px;
+  }
+  .adress-link {
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    display: block;
+    padding: 24px 0;
+    transition: color var(--transition);
+  }
+
+  .adress-link:is(:hover, :focus) {
+    color: var(--link-accent);
+  }
+
   .hero-title {
     font-weight: 700;
     font-size: 56px;
